@@ -4,9 +4,9 @@ A minimal faucet API for Ethereum.
 
 ## Why
 
-You have developed a nice dApp. And you want people to try it. But people don't want to bother getting test ether. You know there exists [faucet.ropsten.be](http://faucet.ropsten.be:3001/), but it's public and supports only Ropsten. Also, you know you could deploy your own [locals-faucetserver](https://github.com/sponnet/locals-faucetserver), but it requires you to setup a Firebase account, and you're too lazy (aren't we all <3).
+You have developed a nice dApp. And you want people to try it. But people don't want to bother getting test ether. You know there exists [faucet.ropsten.be](http://faucet.ropsten.be:3001/), but it's public and supports only Ropsten. Also, you know you could deploy your own [locals-faucetserver](https://github.com/sponnet/locals-faucetserver), but it requires you to set up a Firebase account, and you're too lazy (aren't we all <3).
 
-So you deploy this super micro nano faucet in no time, add some test ether to it, and start rolling! Now, your users can start testing your dApp seemlessly.
+So you deploy this super micro nano faucet in no time, add some test ether to it, and start rolling! Now, your users can start testing your dApp seamlessly.
 
 So, the intended use case is providing some test ether to your dApp users automatically. It's not intended for public use. Ideally, your Front End would would generate a new wallet for the user, then make an HTTP request to your faucet and get a small amount (0.01 ETH or whatevs) so the user can call methods on your smart contract and pay for gas.
 
@@ -30,7 +30,7 @@ So, the intended use case is providing some test ether to your dApp users automa
 ### Note
 
 - The easiest way is to use an automated NodeJS deployment solution like Now or Heroku
-- If you're deploying to a VPS, you'll need to configure your sever to pass requests to the Node app (reverse proxy)
+- If you're deploying to a VPS, you'll need to configure your server to pass requests to the Node app (reverse proxy)
 
 ## Configuration
 
