@@ -1,0 +1,39 @@
+{
+  "name": "nano-faucet",
+  "version": "1.0.0",
+  "description": "A nice minimal Ethereum faucet that's easy to deploy and simple to operate.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "lint": "eslint"
+  },
+  "author": "Petar Slovic <petar@petar.io>",
+  "license": "MIT",
+  "keywords": [
+    "ethereum",
+    "faucet",
+    "testnet",
+    "ropsten",
+    "rinkeby"
+  ],
+  "engines": {
+    "node": ">=9.3.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "module-alias": "^2.1.0",
+    "morgan": "^1.9.0",
+    "web3": "^1.0.0-beta.34"
+  },
+  "devDependencies": {
+    "eslint": "^5.0.1",
+    "eslint-plugin-react": "^7.10.0"
+  },
+  "_moduleAliases": {
+    "@": "src",
+    "@api": "src/api",
+    "@services": "src/services"
+  }
+}
