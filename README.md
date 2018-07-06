@@ -8,7 +8,7 @@ You have developed a nice dApp. And you want people to try it. But people don't 
 
 So you deploy this super micro nano faucet in no time, add some test ether to it, and start rolling! Now, your users can start testing your dApp seamlessly.
 
-So, the intended use case is providing some test ether to your dApp users automatically. It's not intended for public use. Ideally, your Front End would would generate a new wallet for the user, then make an HTTP request to your faucet and get a small amount (0.01 ETH or whatevs) so the user can call methods on your smart contract and pay for gas.
+So, the intended use case is providing some test ether to your dApp users automatically. It's not intended for public use. Ideally, your Front End would generate a new wallet for the user, then make an HTTP request to your faucet and get a small amount (0.01 ETH or whatevs) so the user can call methods on your smart contract and pay for gas.
 
 ## Quick Rundown
 
