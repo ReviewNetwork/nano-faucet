@@ -22,5 +22,9 @@ module.exports = {
 
   getAddress () {
     return wallet.address
+  },
+
+  getPrivateKey () {
+    return wallet.privateKey
   }
 }
