@@ -2,7 +2,6 @@ const { Router } = require('express')
 const config = require('@/config')
 const GeneralApi = require('@api/general')
 const FaucetEthApi = require('@api/faucet-eth')
-const FaucetErc20Api = require('@api/faucet-erc20')
 
 const tokenName = config.ERC20_NAME.toLowerCase()
 
@@ -15,6 +14,7 @@ module.exports = () => {
   }
 
   if (config.FAUCET_DRIPS_ERC20) {
+    const FaucetErc20Api = require('@api/faucet-erc20')
     api.use(`/request/${tokenName}/:address`, FaucetErc20Api.request)
     api.use(`/status/${tokenName}`, FaucetErc20Api.getStatus)
   }
