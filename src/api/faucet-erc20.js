@@ -18,7 +18,7 @@ module.exports = {
 
       let remainingBalance = await erc20wallet.getBalance()
 
-      logger(`SENT ERC20: ${config.ETH_PAYOUT} ${config.ERC20_NAME} to ${address}`)
+      logger(`SENT ERC20: ${config.ERC20_PAYOUT} ${config.ERC20_NAME} to ${address}`)
       logger(`REMAINING ERC20: ${remainingBalance} ${config.ERC20_NAME} left in faucet`)
       return res.json({ amount: config.ERC20_PAYOUT, remainingBalance })
     } catch (ex) {

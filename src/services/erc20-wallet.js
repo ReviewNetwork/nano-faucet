@@ -1,3 +1,5 @@
+const BigNumber = require('bignumber.js')
+
 const config = require('@/config')
 const web3 = require('@services/web3')
 const erc20 = require('@services/erc20')
@@ -8,7 +10,8 @@ const erc20Contract = erc20.contract
 
 module.exports = {
   async sendErc20 ({ to, amount }) {
-    const value = web3.utils.toBN(amount)
+    const decimals = Number(await erc20Contract.methods.decimals().call())
+    const value = new BigNumber(amount).multipliedBy(new BigNumber(10).exponentiatedBy(decimals))
     return erc20.sendSigned(erc20Contract.methods.transfer(to, value))
   },
 

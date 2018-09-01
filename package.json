@@ -20,6 +20,7 @@
     "node": ">=9.3.0"
   },
   "dependencies": {
+    "bignumber.js": "^7.2.1",
     "cors": "^2.8.4",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
