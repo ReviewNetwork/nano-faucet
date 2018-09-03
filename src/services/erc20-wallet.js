@@ -6,9 +6,13 @@ const wallet = web3.eth.accounts.privateKeyToAccount(`0x${config.ERC20_PRIVATE_K
 
 const erc20Contract = erc20.contract
 
+const BN = web3.utils.BN
+
 module.exports = {
   async sendErc20 ({ to, amount }) {
-    const value = web3.utils.toBN(amount)
+    const decimals = new BN(await erc20Contract.methods.decimals().call())
+    const ten = new BN(10, 10)
+    const value = new BN(amount, 10).mul(ten.pow(decimals))
     return erc20.sendSigned(erc20Contract.methods.transfer(to, value))
   },
 
