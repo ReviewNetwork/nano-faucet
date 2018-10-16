@@ -4,7 +4,7 @@ A minimal faucet API for Ethereum and ERC20 tokens.
 
 ## Why
 
-You have developed a nice dApp. And you want people to try it. But people don't want to bother getting test ether. You know there exists [faucet.ropsten.be](http://faucet.ropsten.be:3001/), but it's public and supports only Ropsten. Also, you know you could deploy your own [locals-faucetserver](https://github.com/sponnet/locals-faucetserver), but it requires you to set up a Firebase account, and you're too lazy (aren't we all <3).
+You have developed a nice dApp. And you want people to try it. But people don't want to bother getting test ether. You know there exists [http://faucet.ropsten.be:3001](http://faucet.ropsten.be:3001/), but it's public and supports only Ropsten. Also, you know you could deploy your own [https://github.com/sponnet/locals-faucetserver](https://github.com/sponnet/locals-faucetserver), but it requires you to set up a Firebase account, and you're too lazy (aren't we all <3).
 
 So you deploy this super micro nano faucet in no time, add some test ether and / or your ERC20 tokens to it, and start rolling! Now, your users can start testing your dApp seamlessly.
 
@@ -22,6 +22,7 @@ Also, ideally, you'd create another layer on top of this faucet that provides au
 6. Super simple configuration
 7. Exposed as an API, no Front End
 8. No queuing - sends ether right away
+9. Doesn't allow abuse - it only allows you to get one dose until it runs out
 
 ## Installation
 
