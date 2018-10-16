@@ -36,6 +36,20 @@ Also, ideally, you'd create another layer on top of this faucet that provides au
 - The easiest way is to use an automated NodeJS deployment solution like Now or Heroku
 - If you're deploying to a VPS, you'll need to configure your server to pass requests to the Node app (reverse proxy)
 
+### Now.sh Deployment Example
+
+Now.sh is a service allowing you to host a few of your node apps for free. It's really cool because it gives you a unique url as a subdomain on `now.sh`, and you have automatic SSL through them, which is really helpful when developing small apps and just wanting to show them off quickly.
+
+You can deploy this repo to Now by running:
+
+```sh
+now -p --dotenv
+```
+
+The `-p` flag tell Now to deploy your app as public - this is the limit for free accounts.
+
+The `--dotenv` option is really important because it tells Now to start your node app with your `.env` config.
+
 ## Configuration
 
 To tell the faucet how to work, do this:
